@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@import "@clerk/themes/shadcn.css";
+
+.body {
+  background-color: #f9fafb;
+  color: #1f2937;
+}

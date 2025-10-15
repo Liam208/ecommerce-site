@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce Design</title>
+    <!-- Use the Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <nav
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8 text-blue-600"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+          <span class="text-2xl font-bold text-gray-900">SwiftCart</span>
+        </div>
+        <!-- Navigation Links -->
+        <div class="hidden md:flex space-x-6">
+          <a
+            href="#"
+            class="text-gray-600 hover:text-blue-600 transition-colors duration-300 font-medium"
+            >Home</a
+          >
+          <a
+            href="shop.html"
+            class="text-gray-600 hover:text-blue-600 transition-colors duration-300 font-medium"
+            >Shop</a
+          >
+          <a
+            href="#"
+            class="text-gray-600 hover:text-blue-600 transition-colors duration-300 font-medium"
+            >About</a
+          >
+          <a
+            href="#"
+            class="text-gray-600 hover:text-blue-600 transition-colors duration-300 font-medium"
+            >Contact</a
+          >
+        </div>
+        <!-- Action Buttons -->
+        <div class="flex items-center space-x-4">
+          <a href="#" class="relative">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 text-gray-600 hover:text-blue-600 transition-colors duration-300"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5.4M7 13l-2.293 2.293c-.63.63-.186 1.705.707 1.705H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+              />
+            </svg>
+            <span
+              class="absolute -top-1 -right-1 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full"
+              >3</span
+            >
+          </a>
+                    <a href="#" class="relative">
+            <p
+              class="text-gray-600 hover:text-blue-600 transition-colors duration-200 ms-5 font-medium"
+            >
+              Login
+            </p>
+          </a>
+          <a href="#" class="relative">
+            <p
+              class="text-gray-600 hover:text-blue-600 transition-colors duration-200 font-medium ms-5"
+            >
+              Register
+            </p>
+          </a>
+          <!-- Mobile Menu Button -->
+          <button class="md:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 text-gray-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="bg-blue-600 text-white py-20 px-4">
+        <div class="container mx-auto text-center">
+          <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+            Items
+          </h1>
+          <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90">
+            Here is the list of products you can find on SwiftCart
+          </p>
+        </div>
+      </section>
+
+      <!-- Product Grid Section -->
+      <section class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl font-bold text-center mb-10">Tech Products</h2>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+        >
+          <!-- Product Card 1 -->
+          <div
+            class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+          >
+            <img
+              src="https://placehold.co/600x400/1e40af/ffffff?text=Product+1"
+              alt="Product 1"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-lg font-semibold mb-2">Modern Smartwatch</h3>
+              <p class="text-gray-600 mb-4">
+                Stay connected and track your fitness with this sleek and
+                powerful smartwatch.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-xl font-bold text-blue-600">$199.99</span>
+                <button
+                  class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors duration-300"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 2 -->
+          <div
+            class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+          >
+            <img
+              src="https://placehold.co/600x400/1e40af/ffffff?text=Product+2"
+              alt="Product 2"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-lg font-semibold mb-2">Wireless Headphones</h3>
+              <p class="text-gray-600 mb-4">
+                Immerse yourself in high-fidelity sound with these
+                noise-canceling headphones.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-xl font-bold text-blue-600">$129.50</span>
+                <button
+                  class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors duration-300"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 3 -->
+          <div
+            class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+          >
+            <img
+              src="https://placehold.co/600x400/1e40af/ffffff?text=Product+3"
+              alt="Product 3"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-lg font-semibold mb-2">USB Hub</h3>
+              <p class="text-gray-600 mb-4">
+                Fast and Lightweight uses USB 3.0
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-xl font-bold text-blue-600">$25.00</span>
+                <button
+                  class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors duration-300"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 4 -->
+          <div
+            class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+          >
+            <img
+              src="https://placehold.co/600x400/1e40af/ffffff?text=Product+4"
+              alt="Product 4"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-lg font-semibold mb-2">Portable Speaker</h3>
+              <p class="text-gray-600 mb-4">
+                Enjoy your music on the go with this compact and powerful
+                speaker.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-xl font-bold text-blue-600">$59.99</span>
+                <button
+                  class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors duration-300"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 class="mt-6 text-3xl font-bold text-center mb-10">
+          Clothing Products
+        </h2>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+        >
+          <!-- Product Card 1 -->
+          <div
+            class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+          >
+            <img
+              src="https://placehold.co/600x400/1e40af/ffffff?text=Product+1"
+              alt="Product 1"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-lg font-semibold mb-2">Black Hoodie</h3>
+              <p class="text-gray-600 mb-4">
+                Stay Warm meanwhile looking Cool.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-xl font-bold text-blue-600">$199.99</span>
+                <button
+                  class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors duration-300"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+          >
+            <img
+              src="https://placehold.co/600x400/1e40af/ffffff?text=Product+1"
+              alt="Product 1"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-lg font-semibold mb-2">Black Jeans</h3>
+              <p class="text-gray-600 mb-4">
+                Stay connected and track your fitness with this sleek and
+                powerful smartwatch.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-xl font-bold text-blue-600">$199.99</span>
+                <button
+                  class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors duration-300"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+          >
+            <img
+              src="https://placehold.co/600x400/1e40af/ffffff?text=Product+1"
+              alt="Product 1"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-lg font-semibold mb-2">Blue Sweater</h3>
+              <p class="text-gray-600 mb-4">
+                Feeling cold? Or want to stay cool? Buy the Blue sweater now
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-xl font-bold text-blue-600">$199.99</span>
+                <button
+                  class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors duration-300"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+          >
+            <img
+              src="https://placehold.co/600x400/1e40af/ffffff?text=Product+1"
+              alt="Product 1"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-lg font-semibold mb-2">Black Sneakers</h3>
+              <p class="text-gray-600 mb-4">
+                Stay cool whle protecting your feets
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-xl font-bold text-blue-600">$199.99</span>
+                <button
+                  class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors duration-300"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-10 px-4">
+      <div
+        class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left"
+      >
+        <div class="mb-4 md:mb-0">
+          <span class="text-2xl font-bold text-white">SwiftCart</span>
+          <p class="text-sm mt-2">© 2024 All rights reserved.</p>
+        </div>
+        <div class="flex flex-wrap justify-center md:justify-end space-x-6">
+          <a href="#" class="hover:text-white transition-colors duration-300"
+            >Privacy Policy</a
+          >
+          <a href="#" class="hover:text-white transition-colors duration-300"
+            >Terms of Service</a
+          >
+          <a href="#" class="hover:text-white transition-colors duration-300"
+            >About Us</a
+          >
+          <a href="#" class="hover:text-white transition-colors duration-300"
+            >Support</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
